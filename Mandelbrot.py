@@ -54,15 +54,16 @@ def compute_mandelbrot_set(width, height, max_iter, x_min, x_max, y_min, y_max):
     
     return image
 
-def render_mandelbrot_image(image, params, color_map):
+
+def render_mandelbrot_image(image, params, color_map, x_min, x_max, y_min, y_max):
     # Render the Mandelbrot image
     fig = plt.figure(figsize=(8, 8))
     ax = fig.add_subplot(1, 1, 1)
     
-    # Display the image
-    img = ax.imshow(image, cmap=color_map, origin='lower', interpolation='none')
+    # Display the image with specified limits
+    img = ax.imshow(image, cmap=color_map, origin='lower', extent=(x_min, x_max, y_min, y_max), interpolation='none')
 
-    ax.set_title('Mandelbrot Set\nMax Iterations: {max_iter}'.format(**params))
+    ax.set_title(f'Mandelbrot Set\nMax Iterations: {params["max_iter"]}')
     ax.set_xlabel('Re(c)')
     ax.set_ylabel('Im(c)')
 
@@ -85,7 +86,7 @@ def main(image_size=(1000, 1000), color_map='hot'):
         image = compute_mandelbrot_set(params['width'], params['height'], params['max_iter'], x_min, x_max, y_min, y_max)
         
         # Render the result
-        render_mandelbrot_image(image, params, color_map)
+        render_mandelbrot_image(image, params, color_map, x_min, x_max, y_min, y_max)
         
         # End the time measurement
         end_time = time.process_time()
