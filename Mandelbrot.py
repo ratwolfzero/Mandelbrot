@@ -26,7 +26,6 @@ def get_mandelbrot_parameters():
     return {'width': width, 'height': height, 'max_iter': max_iter}
 
 
-
 @njit
 def compute_mandelbrot_set(width, height, max_iter, x_min, x_max, y_min, y_max):
     # Create an empty image (this will hold the iteration counts)
@@ -73,6 +72,7 @@ def render_mandelbrot_image(image, params, color_map, x_min, x_max, y_min, y_max
 
     plt.tight_layout()
     plt.show()
+    
 
 def main(image_size=(1000, 1000), color_map='hot'):
     try:
