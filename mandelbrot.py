@@ -5,6 +5,7 @@ from scipy.ndimage import gaussian_filter
 import time
 import resource
 
+
 def validate_input(prompt, input_type=float, check_positive_non_zero=False, min_value=None):
     while True:
         user_input = input(prompt)
@@ -25,6 +26,7 @@ def get_mandelbrot_parameters():
     height = validate_input('Enter image height: ', int, check_positive_non_zero=True, min_value=100)
     max_iter = validate_input('Enter max iterations: ', int, check_positive_non_zero=True, min_value=10)
     return {'width': width, 'height': height, 'max_iter': max_iter}
+
 
 @njit
 def compute_mandelbrot_set(width, height, max_iter, x_min, x_max, y_min, y_max):
@@ -53,7 +55,6 @@ def compute_mandelbrot_set(width, height, max_iter, x_min, x_max, y_min, y_max):
 def smooth_image(image, sigma=None):
     
     return gaussian_filter(image, sigma=sigma)    
-
 
 
 def render_mandelbrot_image(image, params, color_map):
