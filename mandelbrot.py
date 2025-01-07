@@ -49,12 +49,7 @@ def compute_mandelbrot_set(width, height, max_iter, x_min, x_max, y_min, y_max):
                 iteration += 1
             image[i, j] = iteration
     
-    return image
-    
-    
-def smooth_image(image, sigma=None):
-    
-    return gaussian_filter(image, sigma=sigma)    
+    return image  
 
 
 def render_mandelbrot_image(image, params, color_map):
@@ -64,7 +59,7 @@ def render_mandelbrot_image(image, params, color_map):
     ax = fig.add_subplot(1, 1, 1)
     
     # Apply the color map to the normalized image
-    img = ax.imshow(image, cmap=color_map, origin='lower', interpolation='none', extent=(params["x_min"], params["x_max"], params["y_min"], params["y_max"]))
+    img = ax.imshow(image, cmap=color_map, origin='lower', interpolation='gaussian', extent=(params["x_min"], params["x_max"], params["y_min"], params["y_max"]))
     
     ax.set_title(f'Mandelbrot Set\nMax Iterations: {params["max_iter"]}')
     ax.set_xlabel('Re(c)')
@@ -93,10 +88,8 @@ def main(image_size=(4000, 4000), color_map='inferno'):
         # Compute the Mandelbrot set
         image = compute_mandelbrot_set(params['width'], params['height'], params['max_iter'], x_min, x_max, y_min, y_max)
         
-        smoothed_image = smooth_image(image, sigma=1.0)
-        
         # Render the result with color map
-        render_mandelbrot_image(smoothed_image, params, color_map)
+        render_mandelbrot_image(image, params, color_map)
         
         # End the time measurement
         end_time = time.process_time()
