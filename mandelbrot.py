@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from numba import njit
+from numba import njit, prange
 from scipy.ndimage import gaussian_filter
 import time
 import resource
@@ -28,7 +28,7 @@ def get_mandelbrot_parameters():
     return {'width': width, 'height': height, 'max_iter': max_iter}
 
 
-@njit
+@njit(parallel=True)
 def compute_mandelbrot_set(width, height, max_iter, x_min, x_max, y_min, y_max):
     # Create an empty image (this will hold the iteration counts)
     image = np.zeros((height, width), dtype=np.uint64)
@@ -38,8 +38,8 @@ def compute_mandelbrot_set(width, height, max_iter, x_min, x_max, y_min, y_max):
     scale_y = (y_max - y_min) / (height - 1)
     
     # Iterate over the pixel grid
-    for i in range(height):
-        for j in range(width):
+    for i in prange(height):
+        for j in prange(width):
             c = complex(x_min + j * scale_x, y_min + i * scale_y)
             z = 0.0j  # Start with z = 0
             iteration = 0
