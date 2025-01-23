@@ -1,3 +1,3 @@
 # Mandelbrot Set
 
-## Pixel-Based Rendering of Mandelbrot set
+## Pixel-Based Rendering of Mandelbrot Set
