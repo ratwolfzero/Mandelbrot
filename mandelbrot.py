@@ -71,6 +71,7 @@ def render_mandelbrot_image(image, params, color_map):
 
     plt.tight_layout()
     plt.show()
+    
 
 def main(image_size=(4000, 4000), color_map='hot'):
     try:
