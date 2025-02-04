@@ -23,4 +23,4 @@ $$
 z_0=0
 $$
 
-If the sequence $$z_n$$ remains within a certain range and does not tend toward infinity, the complex number c belongs to the Mandelbrot set. If at any step the magnitude $$∣z_n∣$$ becomes greater than 2, the sequence will eventually grow infinitely large, meaning c is not part of the set. The Mandelbrot set is famous for its highly detailed and self-repeating boundary structure. When zooming in, the complexity never stops revealing new patterns, making it a classic example of fractal geometry. This intricate structure has intrigued both mathematicians and artists.
+If the sequence $$z_n$$ remains within a certain range and does not tend toward infinity, the complex number c belongs to the Mandelbrot set. If at any step the magnitude $$∣z_n∣$$ becomes greater than 2, the sequence will eventually grow infinitely large, meaning c is not part of the set. The Mandelbrot set is famous for its highly detailed and self-repeating boundary structure. When zooming in, the complexity never stops revealing new patterns, making it a classic example of fractal geometry.
