@@ -17,5 +17,6 @@ For each complex number c the sequence is defined as:
 
 z_{n+1} = z_n^2 + c  
 
-If the sequence remains bounded (i.e., it doesn't grow infinitely large) as the iterations progress, then c is part of the Mandelbrot set.
-The set is famous for its intricate, self-similar boundary structure, which reveals infinite detail upon zooming in, exhibiting an example of fractal geometry. The boundary of the Mandelbrot set is a highly complex and infinitely intricate shape that has fascinated mathematicians and artists alike.
+z_0=0
+
+If the sequence z_n remains within a certain range and does not tend toward infinity, the complex number c belongs to the Mandelbrot set. If at any step the magnitude ∣z_n∣ becomes greater than 2, the sequence will eventually grow infinitely large, meaning c is not part of the set. The Mandelbrot set is famous for its highly detailed and self-repeating boundary structure. When zooming in, the complexity never stops revealing new patterns, making it a classic example of fractal geometry. This intricate structure has intrigued both mathematicians and artists.
