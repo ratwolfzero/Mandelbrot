@@ -6,14 +6,16 @@
 
 ![Mandelbrot_2 Image](Mandelbrot_2.png)
 
-The Mandelbrot set is named after the French-American mathematician Benoît B. Mandelbrot, who is famous for his visualizations of the set in 1980. However, the mathematical foundations of the set were developed earlier by Pierre Fatou and Gastón Julia, who studied the dynamics of iterative functions in the complex plane in the early 20th century. Their pioneering work laid the groundwork for understanding the behavior of such sets.
-The set itself was detected in the 1970s by Robert Brooks and Julius Matelski while exploring complex dynamics. It was Mandelbrot's insight and groundbreaking visualizations that popularized the set and revealed its deep connection to fractal geometry, making it an iconic object in both mathematics and art.  
+### Overview
 
-Overview  
+The Mandelbrot set is named after the French-American mathematician Benoît B. Mandelbrot, who is famous for his visualizations of the set in 1980. However, the mathematical foundations of the set were developed earlier by Pierre Fatou and Gastón Julia, who studied the dynamics of iterative functions in the complex plane in the early 20th century. Their pioneering work laid the groundwork for understanding the behavior of such sets.
+The set itself was detected in the 1970s by Robert Brooks and Julius Matelski while exploring complex dynamics. It was Mandelbrot's insight and groundbreaking visualizations that popularized the set and revealed its deep connection to fractal geometry, making it an iconic object in both mathematics and art.
+
+### Definition
 
 The Mandelbrot set is a set of complex numbers defined by a simple iterative equation.  
 
-For each complex number c the sequence is defined as: 
+For each complex number c the sequence is defined as:
 
 $$
 z_{n+1} = z_n^2 + c  
