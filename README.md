@@ -20,7 +20,8 @@ For each complex number c the sequence is defined as:
 $$
 z_{n+1} = z_n^2 + c  
 $$
-where $$z_0=0$$
+where
+$$z_0=0$$
 
 If the sequence $$z_n$$ remains within a certain range and does not tend toward infinity, the complex number c belongs to the Mandelbrot set. If at any step the magnitude $$∣z_n∣$$ becomes greater than 2, the sequence will eventually grow infinitely large, meaning c is not part of the set.
 
