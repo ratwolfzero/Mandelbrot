@@ -18,10 +18,14 @@ The Mandelbrot set is a set of complex numbers defined by a simple iterative equ
 For each complex number c the sequence is defined as:
 
 $$
-z_{n+1} = z_n^2 + c  
+\large
+z_{n+1} = z_n^2 + c
+\large  
 $$
 where
-$$z_0=0$$
+$$
+\large z_0=0 \large
+$$
 
 If the sequence $$z_n$$ remains within a certain range and does not tend toward infinity, the complex number c belongs to the Mandelbrot set. If at any step the magnitude $$∣z_n∣$$ becomes greater than 2, the sequence will eventually grow infinitely large, meaning c is not part of the set.
 
